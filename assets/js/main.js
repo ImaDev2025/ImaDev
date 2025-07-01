@@ -3,8 +3,8 @@ function sendMessage() {
   const email = document.getElementById("email").value;
   const telephone = document.getElementById("telephone").value;
   const message = document.getElementById("message").value;
-  const botToken = "7794384596:AAH7OeDHZhIQMnX1Bgi8fFHMDSdOHaXL9Bo"; // Replace with your bot token
-  const chatId = "-4848787946"; // Replace with your group chat ID
+  const botToken = "7794384596:AAH7OeDHZhIQMnX1Bgi8fFHMDSdOHaXL9Bo";
+  const chatId = "-4848787946";
   if (name && email && telephone && message) {
     const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
     const payload = {
@@ -19,17 +19,12 @@ function sendMessage() {
       .then((response) => response.json())
       .then((data) => {
         if (data.ok) {
-          alert("Message envoyé ! Nous vous contacterons bientôt.");
           document.getElementById("name").value = "";
           document.getElementById("email").value = "";
           document.getElementById("telephone").value = "";
           document.getElementById("message").value = "";
-        } else {
-          alert("Erreur lors de l'envoi du message.");
         }
       })
-      .catch((error) => alert("Erreur : " + error));
-  } else {
-    alert("Veuillez remplir tous les champs.");
+      .catch((error) => console.error("Erreur : " + error));
   }
 }
