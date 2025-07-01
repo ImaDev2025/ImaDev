@@ -1,0 +1,55 @@
+:root {
+    --primary-color: #ff00ff;
+    --secondary-color: #ffffff;
+    --background-color: #000000;
+}
+
+nav {
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+#home {
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+}
+
+#home a {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+#home a:hover {
+    background-color: #cc00cc;
+}
+
+#services div {
+    background-color: #ffffff;
+}
+
+#about {
+    background-color: #e5e7eb;
+}
+
+#contact input,
+#contact textarea {
+    border-color: #d1d5db;
+}
+
+#contact button {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+#contact button:hover {
+    background-color: #cc00cc;
+}
+
+footer {
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+}
