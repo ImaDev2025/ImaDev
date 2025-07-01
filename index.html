@@ -16,11 +16,20 @@
     <nav>
         <div class="container">
             <img src="./assets/img/logo.jpeg" alt="ImaDev Logo">
-            <ul>
-                <li><a href="#home">Accueil</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">À Propos</a></li>
-                <li><a href="#contact">Contact</a></li>
+
+            <!-- Menu burger button -->
+            <div class="burger-menu pr2rem" id="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- Navigation menu -->
+            <ul class="nav-menu pr2rem" id="nav-menu">
+                <li><a href="#home" onclick="closeMenu()">Accueil</a></li>
+                <li><a href="#services" onclick="closeMenu()">Services</a></li>
+                <li><a href="#about" onclick="closeMenu()">À Propos</a></li>
+                <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
             </ul>
         </div>
     </nav>
