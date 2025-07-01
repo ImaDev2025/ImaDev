@@ -7,51 +7,49 @@
     <meta name="description"
         content="ImaDev offre des solutions de création et design de sites web et applications sur mesure. Découvrez nos services de conception web, développement d'applications et design UI/UX pour booster votre présence digitale.">
     <title>ImaDev - Création de Sites Web & Applications</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="icon" type="image/x-icon" href="./assets/img/logo.jpeg">
+    <link rel="icon" type="image/x-icon" href="./assets/img/logo.png">
 </head>
 
-<body class="font-sans bg-gray-200 text-gray-900">
+<body>
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-[#0b000c] text-white p-4 z-10">
-        <div class="container mx-auto flex justify-between items-center">
-            <img src="./assets/img/logo.jpeg" alt="ImaDev Logo" class="h-12">
-            <ul class="flex space-x-6">
-                <li><a href="#home" class="hover:underline">Accueil</a></li>
-                <li><a href="#services" class="hover:underline">Services</a></li>
-                <li><a href="#about" class="hover:underline">À Propos</a></li>
-                <li><a href="#contact" class="hover:underline">Contact</a></li>
+    <nav>
+        <div class="container">
+            <img src="./assets/img/logo.jpeg" alt="ImaDev Logo">
+            <ul>
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">À Propos</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="py-20 text-center mt-16 bg-[#0b000c] text-white">
-        <div class="container mx-auto">
-            <img src="./assets/img/logo.jpeg" alt="ImaDev Logo" class="h-32 mx-auto mb-4">
-            <h2 class="text-4xl font-bold mb-4">Bienvenue chez ImaDev</h2>
-            <p class="text-lg mb-6">Création et design de sites web et applications sur mesure.</p>
-            <a href="#contact"
-                class="bg-gray-800 text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-700">Nous contacter</a>
+    <section id="home">
+        <div class="container">
+            <img src="./assets/img/logo.png" alt="ImaDev Logo">
+            <h2>Bienvenue chez ImaDev</h2>
+            <p>Création et design de sites web et applications sur mesure.</p>
+            <a href="#contact">Nous contacter</a>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-16">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-8">Nos Services</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <h3 class="text-xl font-semibold mb-4">Conception Web</h3>
+    <section id="services">
+        <div class="container">
+            <h2>Nos Services</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Conception Web</h3>
                     <p>Sites web modernes, responsives et optimisés pour tous les appareils.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <h3 class="text-xl font-semibold mb-4">Développement d'Applications</h3>
+                <div class="card">
+                    <h3>Développement d'Applications</h3>
                     <p>Applications mobiles et web sur mesure pour vos besoins.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <h3 class="text-xl font-semibold mb-4">Design UI/UX</h3>
+                <div class="card">
+                    <h3>Design UI/UX</h3>
                     <p>Interfaces esthétiques et intuitives pour une expérience utilisateur optimale.</p>
                 </div>
             </div>
@@ -59,39 +57,34 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-16 bg-gray-100">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-8">À Propos de Nous</h2>
-            <p class="text-lg max-w-2xl mx-auto">ImaDev est une entreprise passionnée par l'innovation numérique. Nous
-                combinons créativité et expertise technique pour offrir des solutions web et mobiles qui boostent votre
-                présence digitale.</p>
+    <section id="about">
+        <div class="container">
+            <h2>À Propos de Nous</h2>
+            <p>ImaDev est une entreprise passionnée par l'innovation numérique. Nous combinons créativité et expertise
+                technique pour offrir des solutions web et mobiles qui boostent votre présence digitale.</p>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-16">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-8">Contactez-Nous</h2>
-            <div class="max-w-lg mx-auto">
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <input id="name" type="text" placeholder="Votre nom" class="w-full p-3 mb-4 border rounded">
-                    <input id="email" type="email" placeholder="Votre email" class="w-full p-3 mb-4 border rounded">
-                    <input id="telephone" type="tel" placeholder="Votre téléphone"
-                        class="w-full p-3 mb-4 border rounded">
-                    <textarea id="message" placeholder="Votre message"
-                        class="w-full p-3 mb-4 border rounded"></textarea>
-                    <button onclick="sendMessage()"
-                        class="bg-gray-800 text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-700">Envoyer</button>
+    <section id="contact">
+        <div class="container">
+            <h2>Contactez-Nous</h2>
+            <div class="form-container">
+                <div class="card">
+                    <input type="text" id="name" placeholder="Votre nom">
+                    <input type="email" id="email" placeholder="Votre email">
+                    <input type="tel" id="telephone" placeholder="Votre téléphone">
+                    <textarea placeholder="Votre message" id="message"></textarea>
+                    <button onclick="sendMessage()">Envoyer</button>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white text-center py-4">
+    <footer>
         <p>© 2025 ImaDev. Tous droits réservés.</p>
     </footer>
-
     <script src="./assets/js/main.js"></script>
 </body>
 

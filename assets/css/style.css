@@ -1,58 +1,439 @@
-:root {
-    --primary-color: #4a5568;
-    --secondary-color: #ffffff;
-    --background-color: #2d3748;
-    --custom-bg: #0b000c;
+body { 
+    margin: 0; 
+    font-family: Arial, sans-serif; 
+    background-color: #e5e7eb; 
+    color: #ffffff; 
 }
 
-body {
-    background-color: var(--background-color);
-    color: var(--secondary-color);
+nav { 
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    background-color: #000103; 
+    color: white; 
+    padding: 1rem; 
+    z-index: 10; 
 }
 
-nav {
-    background-color: var(--custom-bg);
+nav .container { 
+    max-width: 1280px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
 }
 
-nav a:hover {
-    text-decoration: underline;
+nav img { 
+    height: 3rem; 
 }
 
-#home {
-    background-color: var(--custom-bg);
+nav ul { 
+    list-style: none; 
+    display: flex; 
+    gap: 1.5rem; 
+    margin: 0; 
+    padding: 0; 
 }
 
-#home a {
-    background-color: var(--primary-color);
+nav a { 
+    color: inherit; 
+    text-decoration: none; 
 }
 
-#home a:hover {
-    background-color: #718096;
+nav a:hover { 
+    text-decoration: underline; 
 }
 
-#services div {
-    background-color: #ffffff;
+#home { 
+    padding: 5rem 0; 
+    text-align: center; 
+    background: linear-gradient(45deg, #000103, #1a0a2e, #16213e);
+    position: relative;
+    overflow: hidden;
+}
+
+#home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50" font-size="20" opacity="0.1">💻🚀✨💯🔥</text></svg>') repeat;
+    animation: float 20s infinite linear;
+}
+
+@keyframes float {
+    0% { transform: translateX(-100px); }
+    100% { transform: translateX(100px); }
+}
+
+#home .container { 
+    max-width: 1280px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    position: relative;
+    z-index: 2;
+}
+
+#home img { 
+    height: 8rem; 
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 0 20px #ff00ff);
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+#home h2 { 
+    font-size: 2.25rem; 
+    font-weight: 700; 
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(255, 0, 255, 0.5);
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 2px 2px 4px rgba(255, 0, 255, 0.5); }
+    to { text-shadow: 2px 2px 20px rgba(255, 0, 255, 0.8), 0 0 30px rgba(255, 0, 255, 0.4); }
+}
+
+#home p { 
+    font-size: 1.125rem; 
+    margin-bottom: 1.5rem; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Style meme pour le bouton de contact dans home */
+#home a { 
+    background: linear-gradient(45deg, #ff00ff, #00ffff, #ff6b6b);
+    background-size: 200% 200%;
+    color: white; 
+    padding: 0.75rem 1.5rem; 
+    border-radius: 9999px; 
+    text-decoration: none; 
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.6);
+    animation: rainbow 3s ease infinite, pulse 1.5s ease-in-out infinite alternate;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+#home a::before {
+    content: '🚀';
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+    animation: rocket 2s infinite;
+}
+
+#home a::after {
+    content: '✨';
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+    animation: sparkle 1.5s infinite;
+}
+
+@keyframes rainbow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+}
+
+@keyframes rocket {
+    0%, 100% { left: -30px; }
+    50% { left: 10px; }
+}
+
+@keyframes sparkle {
+    0%, 100% { right: -30px; opacity: 0; }
+    50% { right: 10px; opacity: 1; }
+}
+
+#home a:hover { 
+    transform: scale(1.1) rotate(2deg);
+    box-shadow: 0 0 30px rgba(255, 0, 255, 0.8), 0 0 40px rgba(0, 255, 255, 0.6);
+    animation-duration: 0.5s;
+}
+
+#services { 
+    padding: 4rem 0; 
+    text-align: center; 
+    color: #2d3748; 
+}
+
+#services .container { 
+    background-color: #ffffff; 
+    max-width: 1280px; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+#services h2 { 
+    font-size: 1.875rem; 
+    font-weight: 700; 
+    margin-bottom: 2rem; 
+}
+
+#services .grid { 
+    display: grid; 
+    grid-template-columns: 1fr; 
+    gap: 2rem; 
+    max-width: 1280px; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+@media (min-width: 768px) { 
+    #services .grid { 
+        grid-template-columns: repeat(3, 1fr); 
+    } 
+}
+
+#services .card { 
+    background-color: #ffffff; 
+    padding: 1.5rem; 
+    border-radius: 0.5rem; 
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); 
+}
+
+#services h3 { 
+    font-size: 1.25rem; 
+    font-weight: 600; 
+    margin-bottom: 1rem; 
+}
+
+#about { 
+    padding: 4rem 0; 
+    background-color: #edf2f7; 
+    text-align: center; 
+    color: #2d3748; 
+}
+
+#about .container { 
+    background-color: #edf2f7; 
+    max-width: 1280px; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+#about h2 { 
+    font-size: 1.875rem; 
+    font-weight: 700; 
+    margin-bottom: 2rem; 
+}
+
+#about p { 
+    font-size: 1.125rem; 
+    max-width: 48rem; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+/* Style meme pour la section contact */
+#contact { 
+    padding: 4rem 0; 
+    text-align: center; 
     color: #2d3748;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    position: relative;
+    overflow: hidden;
 }
 
-#about {
-    background-color: #edf2f7;
+#contact::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(255, 255, 255, 0.03) 10px,
+        rgba(255, 255, 255, 0.03) 20px
+    );
+    animation: move 20s linear infinite;
 }
 
-#contact input,
-#contact textarea {
-    border-color: #e2e8f0;
-    color: #2d3748;
+@keyframes move {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
-#contact button {
-    background-color: var(--primary-color);
+#contact .container { 
+    max-width: 1280px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    position: relative;
+    z-index: 2;
 }
 
-#contact button:hover {
-    background-color: #718096;
+#contact h2 { 
+    font-size: 2.5rem; 
+    font-weight: 700; 
+    margin-bottom: 2rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: textGlow 2s ease-in-out infinite alternate;
 }
 
-footer {
-    background-color: var(--background-color);
+@keyframes textGlow {
+    from { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); }
+    to { text-shadow: 2px 2px 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.4); }
+}
+
+#contact .form-container { 
+    max-width: 35rem; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+#contact .card { 
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 2rem; 
+    border-radius: 20px; 
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    animation: cardFloat 3s ease-in-out infinite alternate;
+}
+
+@keyframes cardFloat {
+    from { transform: translateY(0px); }
+    to { transform: translateY(-10px); }
+}
+
+#contact .card::before {
+    content: '📩';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: iconSpin 4s linear infinite;
+}
+
+@keyframes iconSpin {
+    0% { transform: translateX(-50%) rotate(0deg); }
+    100% { transform: translateX(-50%) rotate(360deg); }
+}
+
+#contact input, #contact textarea { 
+    width: 95%; 
+    padding: 1rem; 
+    margin-bottom: 1.5rem; 
+    border: 2px solid #e2e8f0; 
+    border-radius: 15px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+#contact input:focus, #contact textarea:focus {
+    outline: none;
+    border-color: #ff6b6b;
+    box-shadow: 0 0 20px rgba(255, 107, 107, 0.3);
+    transform: translateY(-2px);
+}
+
+#contact button { 
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
+    background-size: 200% 200%;
+    color: white; 
+    padding: 1rem 2rem; 
+    border-radius: 50px; 
+    font-weight: 600; 
+    border: none; 
+    cursor: pointer;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    animation: buttonRainbow 3s ease infinite;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes buttonRainbow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+#contact button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shine 2s infinite;
+}
+
+@keyframes shine {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+#contact button:hover { 
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+#contact button:active {
+    transform: translateY(-1px) scale(1.02);
+}
+
+footer { 
+    background-color: #000103; 
+    color: white; 
+    padding: 1rem 0; 
+    text-align: center; 
+}
+
+/* Effets supplémentaires pour le style meme */
+@keyframes wiggle {
+    0%, 7% { transform: rotateZ(0); }
+    15% { transform: rotateZ(-15deg); }
+    20% { transform: rotateZ(10deg); }
+    25% { transform: rotateZ(-10deg); }
+    30% { transform: rotateZ(6deg); }
+    35% { transform: rotateZ(-4deg); }
+    40%, 100% { transform: rotateZ(0); }
+}
+
+.meme-hover:hover {
+    animation: wiggle 0.8s ease-in-out;
 }
